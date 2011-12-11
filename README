@@ -1,0 +1,73 @@
+Building:
+
+Make sure threads.cma is in your path.
+
+make client
+make server
+
+Testing:
+
+To run your own server, type 
+
+./server 
+
+at the command line.
+
+You can also use my server, located on port 8086 at 50.57.162.241.
+
+To do this, type
+
+./server 50.57.162.241 8086
+
+
+Run the client:
+
+./client
+
+When the client starts, it is in listening mode.  To enter a command, press enter.  A prompt will show up.
+
+> 
+
+Type
+
+> My name is Brian.
+
+to acquire the username Brian.  You must acquire a username to do anything.
+
+Type 
+
+> Start Journeymen.
+
+to start the chat room Journeymen.  You will automatically join the room Journeymen.
+
+Type
+
+> Join Buskers.
+
+to join the chat room Buskers.  A room must be created before it can be joined.
+
+When you enter a command, you return to listening mode.  When you are in listening mode, your client polls the server for updates.  If somebody else talks in your room while you are in listening mode, the server will update you.
+
+To talk in a room, Enter an exclamation point followed by the name of your room, a space, and then whatever it is you'd like to say.  For example:
+
+> !Journeymen Alas!  A beleaguered soul doth find no comfort in these broken lands.
+
+Type
+
+> Leave Buskers.
+
+to leave the room.
+
+Type
+
+> Quit
+
+to leave the program.
+
+If you operate with telnet, your introduction will return a token, which must be prepended to your following messages.  For instance, our above command is actually:
+
+> 90871420398471043691827436: Start Journeymen.
+
+To get updates from chat servers in telnet, use a question mark followed by the name of the room you wish to get an update from.
+
+> 90871420398471043691827436: ?Buskers
